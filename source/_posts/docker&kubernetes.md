@@ -1,7 +1,10 @@
 ---
 title: kubernetes
 date: 2019-05-29 13:58:59
-tags: devops, docker, kubernetes
+tags: 
+- devops
+- docker
+- kubernetes
 ---
 #  安装docker
 1. 安装所需的包。

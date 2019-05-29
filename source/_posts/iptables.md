@@ -1,7 +1,8 @@
----
 title: iptables
-date: 2019-05-29 14:21:05
-tags: linux
+tags:
+  - linux
+categories: []
+date: 2019-05-29 14:21:00
 ---
 # 简介
 
@@ -126,7 +127,7 @@ nat 转发
 
 防CC攻击
 
-   ```shell
+```shell
 iptables -L -F -A -D # list flush append delete
 # 场景一
 iptables -I INPUT -p tcp --dport 80 -j ACCEPT # 允许 tcp 80 端口
@@ -373,4 +374,3 @@ Either long or short options are allowed.
 |--exact	|-x|		expand numbers (display exact values)|		|
 |--modprobe=\<command>|	|	try to insert modules using this|	|
 |--set-counters PKTS BYTES|	|set the counter during insert/append||
-

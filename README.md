@@ -1,9 +1,13 @@
 # 部署
 > npm install hexo-deployer-git --save
 ```shell
-hexo clean 
+hexo clean
 hexo g
 hexo d
+```
+# 新建
+```shell
+hexo new title_name
 ```
 
 ## Welcome to GitHub Pages

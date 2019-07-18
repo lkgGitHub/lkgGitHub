@@ -1,3 +1,4 @@
+---
 title: java位运算符
 categories:
   - java基础

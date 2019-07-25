@@ -1,9 +1,8 @@
----
 sqtitle: sql必知会读书笔记
 date: 2019-07-24 11:53:46
 tags: sql
 categories: 数据库
----
+
 1. sql是什么
 
    SQL （发音为字母 S-Q-L 或 sequel ）是结构化查询语言（ Structured Query Language ）的缩写。 SQL 是一种专门用来与数据库沟通的语言。
@@ -134,6 +133,71 @@ AND prod_price >= 10;
 这条SELECT语句与前一条的唯一差别是，将前两个条件用圆括号括了起来。因为圆括号具有比AND或OR操作符更高的求值顺序，所以 DBMS 首先
 过滤圆括号内的OR条件。这时， SQL 语句变成了选择由供应商DLL01或BRS01制造的且价格在 10 美元及以上的所有产品，这正是我们希望的结
 果。
+
+
+
+# 计算字段
+
+## 拼接字段
+
+## 执行算数计算
+
+加减乘除（+	-	*	/）
+
+
+
+#  使用数据处理函数
+
+**DBMS 函数的差异**
+
+| 函　 数              | 语　　法                                                     |
+| :------------------- | ------------------------------------------------------------ |
+| 提取字符串的组成部分 | Access 使用 MID() ； DB2 、 Oracle 、 PostgreSQL 和 SQLite 使用 SUBSTR() ； MySQL 和 SQL Server 使用 SUBSTRING() |
+| 数据类型转换         | Access 和 Oracle 使用多个函数，每种类型的转换有一个函数； DB2 和 PostgreSQL 使用 CAST() ； MariaDB 、 MySQL 和 SQL Server 使用<br/>CONVERT() |
+| 取当前日期           | Access 使用 NOW() ； DB2 和 PostgreSQL 使用 CURRENT_DATE ； MariaDB 和 MySQL 使用 CURDATE() ； Oracle 使用 SYSDATE ； SQL Server<br/>使用 GETDATE() ； SQLite 使用 DATE() |
+
+  **常用的文本处理函数**
+
+| 函　　数                                   | 说　　明                |
+| ------------------------------------------ | ----------------------- |
+| LEFT() （或使用子字符串函数）              | 返回字符串左边的字符    |
+| LENGTH() （也使用 DATALENGTH() 或 LEN() ） | 返回字符串的长度        |
+| LOWER() （ Access 使用 LCASE() ）          | 将字符串转换为小写      |
+| LTRIM()                                    | 去掉字符串左边的空格    |
+| RIGHT() （或使用子字符串函数）             | 返回字符串右边的字符    |
+| RTRIM()                                    | 去掉字符串右边的空格    |
+| SOUNDEX()                                  | 返回字符串的 SOUNDEX 值 |
+| UPPER() （ Access 使用 UCASE() ）          | 将字符串转换为大写      |
+
+
+
+ **数值处理函数**
+
+| 函　　数 | 说　　明           |
+| -------- | ------------------ |
+| ABS()    | 返回一个数的绝对值 |
+| COS()    | 返回一个角度的余弦 |
+| EXP()    | 返回一个数的指数值 |
+| PI()     | 返回圆周率         |
+| SIN()    | 返回一个角度的正弦 |
+| SQRT()   | 返回一个数的平方根 |
+| TAN()    | 返回一个角度的正切 |
+
+
+
+# 聚集函数
+
+SQL 聚集函数
+
+| 函　　数 | 说　　明         |
+| -------- | ---------------- |
+| AVG()    | 返回某列的平均值 |
+| COUNT()  | 返回某列的行数   |
+| MAX()    | 返回某列的最大值 |
+| MIN()    | 返回某列的最小值 |
+| SUM()    | 返回某列值之和   |
+
+
 
 # 关键字
 

@@ -300,25 +300,26 @@ WHERE在数据分组前进行过滤，HAVING在数据分组后进行过滤。这
 
 使用HAVING时应该结合GROUP BY子句，而WHERE子句用于标准的行级过滤。
 
+## 分组和排序
+
+
+
 # 关键字
 
-| 关键字               | 作用                 | 示例 |
+| 关键字               | 作用                 | 附加说明 |
 | -------------------- | -------------------- | ---- |
-| select               |                      |      |
-| from                 |                      |      |
-| DISTINCT    distinct |                      |      |
-| ORDER BY             |                      |      |
-| DESC （DESCENDING）  | 降序                 |      |
-| ASC（ASCENDING）     | 升序（升序是默认的） |      |
-| WHERE                | 指定搜索条件进行过滤 |      |
+| SELECT         | 要返回的列或表达式 |      |
+| FROM             | 从中检索数据的表 |      |
+| WHERE | 指定搜索条件进行过滤（行级过滤） | 范围值检查：BETWEEN  xx AND xx<br/>指定条件范围：IN(xx, xx)<br/>否定其后条件：NOT |
+| GROUP BY             | 分组                             | 组级过滤：HAVING                                             |
+| ORDER BY             | 输出排序顺序                     | 降序：DESC （DESCENDING）<br/>升序（默认）：ASC（ASCENDING） |
+|                      |                                  |                                                              |
+| DISTINCT    distinct |                                  |      |
 | IS NULL              | 非空检查             |      |
-| BETWEEN  xx AND xx   | 范围值检查           |      |
 |AND 、OR|逻辑操作符||
-|IN(xx, xx)|指定条件范围||
-|NOT| WHERE子句中用来否定其后条件 ||
 |LIKE|||
-|GROUP BY|分组||
-|HAVING|过滤分组||
+|                      |                                  ||
+|                      |                                  ||
 
 1. **distinct**
 

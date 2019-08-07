@@ -412,7 +412,123 @@ WHERE在数据分组前进行过滤，HAVING在数据分组后进行过滤。这
 
 为安全措施（主要受上一条缺陷的影响）。
 
+## 创建
 
+```mysql
+create procedure productpricing()
+BEGIN
+    SELECT AVG(prod_price) AS priceaverage
+    FROM products;
+END
+```
+
+用CREATE PROCEDURE productpricing()语句定义。如果存储过程接受参数，它们将在()中列举出来。存储过程的代码位于BEGIN和END语句内，
+
+**mysql命令行客户机的分隔符**
+
+DELIMITER //告诉命令行实用程序使用//作为新的语句结束分隔符，
+
+## 使用
+
+```mysql
+CALL productpricing()
+```
+
+## 删除
+
+```mysql
+DROP PROCEDURE productpricing;
+DROP PROCEDURE productpricing IF EXISTS;
+```
+
+## 使用参数
+
+```mysql
+create procedure productpricing(
+    OUT p1 DECIMAL(8, 2),
+    OUT ph DECIMAL(8, 2),
+    OUT pa DECIMAL(8, 2)
+)
+BEGIN
+    SELECT MIN(prod_price) INTO p1 FROM products;
+    SELECT MAX(prod_price) INTO ph FROM products;
+    SELECT AVG(prod_price) INTO pa FROM products
+END;
+```
+
+每个参数必须具有指定的类型，这里使用十进制值(DECIMAL 关键字)。关键字OUT指出相应的参数用来从存储过程传出一个值（返回给调用者）。MySQL支持IN（传递给存储过程）、OUT（从存储过程传出，如这里所用）和INOUT（对存储过程传入和传出）类型的参数。
+
+### 使用
+
+```mysql
+CALL productpricing(@procelow, @pricehigh, @priceAverage);
+SELECT @procelow;
+```
+
+**变量名:** 所有MySQL变量都必须以@开始。
+
+## 建立智能存储过程
+
+只有在存储过程内包含业务规则和智能处理时，它们的威力才真正显现出来。
+
+用DECLARE语句定义了两个局部变量。DECLARE要求指定变量名和数据类型，它也支持可选的默认值.
+
+**COMMENT关键字** 本例子中的存储过程在CREATE PROCEDURE语
+句中包含了一个COMMENT值。它不是必需的，但如果给出，将
+在SHOW PROCEDURE STATUS的结果中显示。
+
+## 检查存储过程
+
+```mysql
+# 显示用来创建一个存储过程的CREATE语句
+SHOW CREATE PROCEDURE ordertotal;
+# 了获得包括何时、由谁创建等详细信息的存储过程列表
+SHOW STATUS PROCEDURE ordertotal;
+```
+
+# 20. 管理事务处理
+
+## 为什么
+
+使用事务处理（transaction processing），通过确保成批的SQL操作要么完全执行，要么完全不执行，来维护数据库的完整
+
+- 事务（transaction）指一组SQL语句；
+- 回退（rollback）指撤销指定SQL语句的过程；
+- 提交（commit）指将未存储的SQL语句结果写入数据库表；
+- 保留点（savepoint）指事务处理中设置的临时占位符（placeholder），可以对它发布回退（与回退整个事务处理不同）
+
+##  控制事务处理
+
+管理事务处理的关键在于将SQL语句组分解为逻辑块，并明确规定数据何时应该回退，何时不应该回退。
+
+```mysql
+# 开始事务
+start transaction
+
+# 回退
+ROLLBACK
+
+# 提交
+COMMIT
+
+# 保留点, 部分回退
+SAVEPOINT point1;
+ROLLBACK TO point1
+```
+
+ROLLBACK命令用来回退（撤销）MySQL语句
+
+ROLLBACK** 只能在一个事务处理内使用（在执行一条STARTTRANSACTION命令之后）。
+
+
+
+一般的MySQL语句都是直接针对数据库表执行和编写的。这就是所谓的隐含提交（implicit commit），即提交（写或保存）操作是自动进行的。
+
+​	但是，在事务处理块中，提交不会隐含地进行。为进行明确的提交，使用COMMIT语句.
+
+**隐含事务关闭 :**当COMMIT或ROLLBACK语句执行后，事务会自动关闭（将来的更改会隐含提交）
+
+保留点越多越好可以在SQL代码中设置任意多的保留点，越多越好。为什么呢？因为保留点越多，你就越能灵活地进行回退。
 
 # 21. 使用游标
 

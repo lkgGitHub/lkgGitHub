@@ -1,23 +1,1874 @@
-{% extends '_layout.swig' %}
-{% import '_macro/post.swig' as post_template %}
-{% import '_macro/sidebar.swig' as sidebar_template %}
+<!DOCTYPE html>
 
-{% block title %}{{ title }} {% if theme.index_with_subtitle and subtitle %} – {{ subtitle }} - {{ theme.description }}{% endif %}{% endblock %}
 
-{% block page_class %}
-  {% if is_home() %}page-home{% endif -%}
-{% endblock %}
 
-{% block content %}
+
+
+
+
+
+
+
+
+
+  
+
+
+<html class="theme-next pisces use-motion" lang="zh-CN">
+<head>
+  <meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2"/>
+<meta name="theme-color" content="#222"/>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<link rel="stylesheet" href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2"/>
+
+<link rel="stylesheet" href="/css/main.css?v=7.1.1"/>
+
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png?v=7.1.1">
+
+
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png?v=7.1.1">
+
+
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png?v=7.1.1">
+
+
+  <link rel="mask-icon" href="/images/logo.svg?v=7.1.1" color="#222">
+
+
+
+
+
+
+
+<script id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '',
+    scheme: 'Pisces',
+    version: '7.1.1',
+    sidebar: {"position":"left","display":"post","offset":12,"onmobile":false,"dimmer":false},
+    back2top: true,
+    back2top_sidebar: false,
+    fancybox: false,
+    fastclick: false,
+    lazyload: false,
+    tabs: true,
+    motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+  
+
+
+
+
+  <meta property="og:type" content="website">
+<meta property="og:title" content="lkgBlog">
+<meta property="og:url" content="https://lkggithub.github.io/page/2/index.html">
+<meta property="og:site_name" content="lkgBlog">
+<meta property="og:locale" content="zh_CN">
+<meta property="article:author" content="lkg">
+<meta name="twitter:card" content="summary">
+
+
+
+
+
+  
+  
+  <link rel="canonical" href="https://lkggithub.github.io/page/2/"/>
+
+
+
+<script id="page.configurations">
+  CONFIG.page = {
+    sidebar: "",
+  };
+</script>
+
+  <title>lkgBlog </title>
+  
+
+
+
+
+
+
+  <script>
+    var _hmt = _hmt || [];
+    (function() {
+      var hm = document.createElement("script");
+      hm.src = "https://hm.baidu.com/hm.js?f9967890e888a3bfd99eab89c1f47c97";
+      var s = document.getElementsByTagName("script")[0];
+      s.parentNode.insertBefore(hm, s);
+    })();
+  </script>
+
+
+
+
+
+
+
+  <noscript>
+  <style>
+  .use-motion .motion-element,
+  .use-motion .brand,
+  .use-motion .menu-item,
+  .sidebar-inner,
+  .use-motion .post-block,
+  .use-motion .pagination,
+  .use-motion .comments,
+  .use-motion .post-header,
+  .use-motion .post-body,
+  .use-motion .collection-title { opacity: initial; }
+
+  .use-motion .logo,
+  .use-motion .site-title,
+  .use-motion .site-subtitle {
+    opacity: initial;
+    top: initial;
+  }
+
+  .use-motion .logo-line-before i { left: initial; }
+  .use-motion .logo-line-after i { right: initial; }
+  </style>
+</noscript>
+
+<meta name="generator" content="Hexo 5.4.0"></head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-CN">
+
+  
+  
+    
+  
+
+  <div class="container sidebar-position-left 
+  page-home">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta">
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/" class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">lkgBlog</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+    
+    
+  </div>
+
+  <div class="site-nav-toggle">
+    <button aria-label="切换导航栏">
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+
+
+<nav class="site-nav">
+  
+    <ul id="menu" class="menu">
+      
+        
+        
+        
+          
+          <li class="menu-item menu-item-home">
+
+    
+    
+    
+      
+    
+
+    
+
+    <a href="/" rel="section"><i class="menu-item-icon fa fa-fw fa-home"></i> <br/>首页</a>
+
+  </li>
+        
+        
+        
+          
+          <li class="menu-item menu-item-about">
+
+    
+    
+    
+      
+    
+
+    
+
+    <a href="/about/" rel="section"><i class="menu-item-icon fa fa-fw fa-user"></i> <br/>关于</a>
+
+  </li>
+        
+        
+        
+          
+          <li class="menu-item menu-item-tags">
+
+    
+    
+    
+      
+    
+
+    
+
+    <a href="/tags/" rel="section"><i class="menu-item-icon fa fa-fw fa-tags"></i> <br/>标签</a>
+
+  </li>
+        
+        
+        
+          
+          <li class="menu-item menu-item-categories">
+
+    
+    
+    
+      
+    
+
+    
+
+    <a href="/categories/" rel="section"><i class="menu-item-icon fa fa-fw fa-th"></i> <br/>分类</a>
+
+  </li>
+        
+        
+        
+          
+          <li class="menu-item menu-item-archives">
+
+    
+    
+    
+      
+    
+
+    
+
+    <a href="/archives/" rel="section"><i class="menu-item-icon fa fa-fw fa-archive"></i> <br/>归档</a>
+
+  </li>
+
+      
+      
+    </ul>
+  
+
+  
+
+  
+</nav>
+
+
+
+  
+
+
+
+</div>
+    </header>
+
+    
+
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          
+            
+
+          
+          <div id="content" class="content">
+            
   <section id="posts" class="posts-expand">
-    {% for post in page.posts %}
-      {{ post_template.render(post, true) }}
-    {% endfor %}
+    
+      
+
+  
+
+  
+  
+  
+
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="https://lkggithub.github.io/2019/05/29/iptables/"/>
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="lkg"/>
+      <meta itemprop="description" content=""/>
+      <meta itemprop="image" content="/images/avatar.gif"/>
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="lkgBlog"/>
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                
+                <a href="/2019/05/29/iptables/" class="post-title-link" itemprop="url">iptables</a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+
+            
+            
+            
+
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+
+              
+                
+              
+
+              <time title="创建时间：2019-05-29 14:21:00" itemprop="dateCreated datePublished" datetime="2019-05-29T14:21:00+08:00">2019-05-29</time>
+            
+
+            
+              
+
+              
+                
+                <span class="post-meta-divider">|</span>
+                
+
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">更新于</span>
+                
+                <time title="修改时间：2021-03-06 14:39:57" itemprop="dateModified" datetime="2021-03-06T14:39:57+08:00">2021-03-06</time>
+              
+            
+          </span>
+
+          
+
+          
+            
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h1 id="简介"><a href="#简介" class="headerlink" title="简介"></a>简介</h1><p>iptables 是一个通过控制 Linux 内核的 netfilter 模块来管理网络数据包的流动与转送的应用软件，其功能包括不仅仅包括防火墙的控制出入流量，还有端口转发等等。</p>
+<p>引用：[<a target="_blank" rel="noopener" href="http://www.zsythink.net/archives/1199]">http://www.zsythink.net/archives/1199]</a></p>
+<p><a target="_blank" rel="noopener" href="https://wangchujiang.com/linux-command/c/iptables.html">https://wangchujiang.com/linux-command/c/iptables.html</a></p>
+<p>iptables -A INPUT -m string –algo kmp –hex-string ‘|deadc0dedeadc0de|’ -j DROPshell 命令</p>
+<p>命令选项输入顺序</p>
+<p>iptables     -t 表名     &lt;-A/I/D/R&gt; 规则链名 [规则号]     &lt;-i/o 网卡名&gt;         -p 协议名             &lt;-s 源IP/源子网&gt;         –sport 源端口      &lt;-d 目标IP/目标子网&gt;      –dport 目标端口      -j 动作</p>
+<p>192.168.1.112<br>iptables -A INPUT -s 192.168.1.112 -p tcp –dport 22 -j DROP</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#</span><span class="bash"> 清空当前的所有规则和计数</span></span><br><span class="line">iptables -F  # 清空所有的防火墙规则</span><br><span class="line">iptables -X  # 删除用户自定义的空链</span><br><span class="line">iptables -Z  # 清空计数</span><br><span class="line"><span class="meta"></span></span><br><span class="line"><span class="meta"></span></span><br><span class="line"><span class="meta">#</span><span class="bash"> 配置拒绝ssh端口连接</span></span><br><span class="line">iptables -A INPUT -s 192.168.1.112 -p tcp --dport 22 -j DROP</span><br><span class="line"><span class="meta"></span></span><br><span class="line"><span class="meta"></span></span><br><span class="line"><span class="meta">#</span><span class="bash"> 配置白名单</span></span><br><span class="line">iptables -A INPUT -p all -s 192.168.1.0/24 -j ACCEPT  # 允许机房内网机器可以访问</span><br><span class="line">iptables -A INPUT -p all -s 192.168.140.0/24 -j ACCEPT  # 允许机房内网机器可以访问</span><br><span class="line">iptables -A INPUT -p tcp -s 183.121.3.7 --dport 3380 -j ACCEPT # 允许183.121.3.7访问本机的3380端口</span><br><span class="line"><span class="meta"></span></span><br><span class="line"><span class="meta"></span></span><br><span class="line"><span class="meta">#</span><span class="bash"> 开启相应的服务端口</span></span><br><span class="line">iptables -A INPUT -p tcp --dport 80 -j ACCEPT # 开启80端口，因为web对外都是这个端口</span><br><span class="line">iptables -A INPUT -p icmp --icmp-type 8 -j ACCEPT # 允许被ping</span><br><span class="line">iptables -A INPUT -m state --state ESTABLISHED,RELATED -j ACCEPT # 已经建立的连接得让它进来</span><br><span class="line"><span class="meta"></span></span><br><span class="line"><span class="meta"></span></span><br><span class="line"><span class="meta">#</span><span class="bash"> 列出已设置的规则  iptables -L [-t 表名] [链名]</span></span><br><span class="line">iptables -L -t nat                # 列出 nat 上面的所有规则</span><br><span class="line">iptables -L -nv 				# 查看，这个列表看起来更详细</span><br><span class="line"><span class="meta"></span></span><br><span class="line"><span class="meta"></span></span><br><span class="line"><span class="meta">#</span><span class="bash"> 清除已有规则</span></span><br><span class="line">iptables -F INPUT  # 清空指定链 INPUT 上面的所有规则</span><br><span class="line">iptables -X INPUT  # 删除指定的链，这个链必须没有被其它任何规则引用，而且这条上必须没有任何规则。 如果没有指定链名，则会删除该表中所有非内置的链。</span><br><span class="line">iptables -Z INPUT  # 把指定链，或者表中的所有链上的所有计数器清零。</span><br><span class="line"><span class="meta"></span></span><br><span class="line"><span class="meta"></span></span><br><span class="line"><span class="meta">#</span><span class="bash"> 删除已添加的规则</span></span><br><span class="line">iptables -A INPUT -s 192.168.1.5 -j DROP		# 添加一条规则</span><br><span class="line"><span class="meta">#</span><span class="bash"> 将所有iptables以序号标记显示，执行：</span></span><br><span class="line">iptables -L -n --line-numbers</span><br><span class="line"><span class="meta">#</span><span class="bash"> 比如要删除INPUT里序号为8的规则，执行：</span></span><br><span class="line">iptables -D INPUT 8</span><br><span class="line"><span class="meta"></span></span><br><span class="line"><span class="meta"></span></span><br><span class="line"><span class="meta">#</span><span class="bash"> 开放指定的端口</span></span><br><span class="line">iptables -A INPUT -s 127.0.0.1 -d 127.0.0.1 -j ACCEPT               #允许本地回环接口(即运行本机访问本机)</span><br><span class="line">iptables -A INPUT -m state --state ESTABLISHED,RELATED -j ACCEPT    #允许已建立的或相关连的通行</span><br><span class="line">iptables -A OUTPUT -j ACCEPT         #允许所有本机向外的访问</span><br><span class="line">iptables -A INPUT -p tcp --dport 22 -j ACCEPT    #允许访问22端口</span><br><span class="line">iptables -A INPUT -p tcp --dport 80 -j ACCEPT    #允许访问80端口</span><br><span class="line">iptables -A INPUT -p tcp --dport 21 -j ACCEPT    #允许ftp服务的21端口</span><br><span class="line">iptables -A INPUT -p tcp --dport 20 -j ACCEPT    #允许FTP服务的20端口</span><br><span class="line">iptables -A INPUT -j reject       #禁止其他未允许的规则访问</span><br><span class="line">iptables -A FORWARD -j REJECT     #禁止其他未允许的规则访问</span><br><span class="line"><span class="meta"></span></span><br><span class="line"><span class="meta"></span></span><br><span class="line"><span class="meta">#</span><span class="bash"> 屏蔽IP</span></span><br><span class="line">iptables -A INPUT -p tcp -m tcp -s 192.168.0.8 -j DROP  # 屏蔽恶意主机（比如，192.168.0.8</span><br><span class="line">iptables -I INPUT -s 123.45.6.7 -j DROP       #屏蔽单个IP的命令</span><br><span class="line">iptables -I INPUT -s 123.0.0.0/8 -j DROP      #封整个段即从123.0.0.1到123.255.255.254的命令</span><br><span class="line">iptables -I INPUT -s 124.45.0.0/16 -j DROP    #封IP段即从123.45.0.1到123.45.255.254的命令</span><br><span class="line">iptables -I INPUT -s 123.45.6.0/24 -j DROP    #封IP段即从123.45.6.1到123.45.6.254的命令是</span><br><span class="line"><span class="meta"></span></span><br><span class="line"><span class="meta"></span></span><br><span class="line"><span class="meta">#</span><span class="bash"> 指定数据包出去的网络接口，只对 OUTPUT，FORWARD，POSTROUTING 三个链起作用。</span></span><br><span class="line">iptables -A FORWARD -o eth0</span><br><span class="line"><span class="meta"></span></span><br><span class="line"><span class="meta"></span></span><br><span class="line"><span class="meta">#</span><span class="bash"> 启动网络转发规则。网210.14.67.7让内网192.168.188.0/24上网</span></span><br><span class="line">iptables -t nat -A POSTROUTING -s 192.168.188.0/24 -j SNAT --to-source 210.14.67.127</span><br><span class="line"><span class="meta"></span></span><br><span class="line"><span class="meta"></span></span><br><span class="line"><span class="meta">#</span><span class="bash"> 端口映射。本机的 5000 端口映射到内网 虚拟机的80 端口</span></span><br><span class="line">iptables -t nat -A PREROUTING -d 192.168.80.128 -p tcp --dport 80  -j DNAT --to-dest 192.168.80.128:5000</span><br><span class="line"><span class="meta"></span></span><br><span class="line"><span class="meta"></span></span><br><span class="line"><span class="meta">#</span><span class="bash">字符串匹配。比如，我们要过滤所有TCP连接中的字符串<span class="built_in">test</span>，一旦出现它我们就终止这个连接，我们可以这么做：</span></span><br><span class="line">iptables -A INPUT -p tcp -m string --algo kmp --string &quot;test&quot; -j REJECT --reject-with tcp-reset</span><br></pre></td></tr></table></figure>
+
+<h2 id="使用场景实例"><a href="#使用场景实例" class="headerlink" title="使用场景实例"></a>使用场景实例</h2><ul>
+<li>场景一</li>
+</ul>
+<p>开放 tcp 10-22/80 端口 开放 icmp 其他未被允许的端口禁止访问</p>
+<p>存在的问题: 本机无法访问本机; 本机无法访问其他主机</p>
+<ul>
+<li>场景二</li>
+</ul>
+<p>ftp: 默认被动模式(服务器产生随机端口告诉客户端, 客户端主动连接这个端口拉取数据) vsftpd: 使 ftp 支持主动模式(客户端产生随机端口通知服务器, 服务器主动连接这个端口发送数据)</p>
+<ul>
+<li>场景三</li>
+</ul>
+<p>允许外网访问: web http -&gt; 80/tcp; https -&gt; 443/tcp mail smtp -&gt; 25/tcp; smtps -&gt; 465/tcp pop3 -&gt; 110/tcp; pop3s -&gt; 995/tcp imap -&gt; 143/tcp</p>
+<p>内部使用: file nfs -&gt; 123/udp samba -&gt; 137/138/139/445/tcp ftp -&gt; 20/21/tcp remote ssh -&gt; 22/tcp sql mysql -&gt; 3306/tcp oracle -&gt; 1521/tcp</p>
+<ul>
+<li>场景四</li>
+</ul>
+<p>nat 转发</p>
+<ul>
+<li>场景五</li>
+</ul>
+<p>防CC攻击</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br></pre></td><td class="code"><pre><span class="line">iptables -L -F -A -D # list flush append delete</span><br><span class="line"><span class="meta">#</span><span class="bash"> 场景一</span></span><br><span class="line">iptables -I INPUT -p tcp --dport 80 -j ACCEPT # 允许 tcp 80 端口</span><br><span class="line">iptables -I INPUT -p tcp --dport 10:22 -j ACCEPT # 允许 tcp 10-22 端口</span><br><span class="line">iptables -I INPUT -p icmp -j ACCEPT # 允许 icmp</span><br><span class="line">iptables -A INPUT -j REJECT # 添加一条规则, 不允许所有</span><br><span class="line"><span class="meta"></span></span><br><span class="line"><span class="meta">#</span><span class="bash"> 优化场景一</span></span><br><span class="line">iptables -I INPUT -i lo -j ACCEPT # 允许本机访问</span><br><span class="line">iptables -I INPUT -m state --state ESTABLISHED,RELATED -j ACCEPT # 允许访问外网</span><br><span class="line">iptables -I INPUT -p tcp --dport 80 -s 10.10.188.233 -j ACCEPT # 只允许固定ip访问80</span><br><span class="line"><span class="meta"></span></span><br><span class="line"><span class="meta">#</span><span class="bash"> 场景二</span></span><br><span class="line">vi /etc/vsftpd/vsftpd.conf # 使用 vsftpd 开启 ftp 主动模式</span><br><span class="line">port_enable=yes</span><br><span class="line">connect_from_port_20=YES</span><br><span class="line">iptables -I INPUT -p tcp --dport 21 -j ACCEPT</span><br><span class="line"></span><br><span class="line">vi /etc/vsftpd/vsftpd.conf # 建议使用 ftp 被动模式</span><br><span class="line">pasv_min_port=50000</span><br><span class="line">pasv_max_port=60000</span><br><span class="line">iptables -I INPUT -p tcp --dport 21 -j ACCEPT</span><br><span class="line">iptables -I INPUT -p tcp --dport 50000:60000 -j ACCEPT</span><br><span class="line"><span class="meta"></span></span><br><span class="line"><span class="meta">#</span><span class="bash"> 还可以使用 iptables 模块追踪来自动开发对应的端口</span></span><br><span class="line"><span class="meta"></span></span><br><span class="line"><span class="meta">#</span><span class="bash"> 场景三</span></span><br><span class="line">iptables -I INPUT -i lo -j ACCEPT # 允许本机访问</span><br><span class="line">iptables -I INPUT -m state --state ESTABLISHED,RELATED -j ACCEPT # 允许访问外网</span><br><span class="line">iptables -I INPUT -s 10.10.155.0/24 -j ACCEPT # 允许内网访问</span><br><span class="line">iptables -I INPUT -p tcp -m multiport --dports 80,1723 -j ACCEPT # 允许端口, 80 -&gt; http, 1723 -&gt; vpn</span><br><span class="line">iptables -A INPUT -j REJECT # 添加一条规则, 不允许所有</span><br><span class="line"></span><br><span class="line">iptables-save # 保存设置到配置文件</span><br><span class="line"><span class="meta"></span></span><br><span class="line"><span class="meta">#</span><span class="bash"> 场景四</span></span><br><span class="line">iptables -t nat -L # 查看 nat 配置</span><br><span class="line"></span><br><span class="line">iptables -t nat -A POST_ROUTING -s 10.10.177.0/24 -j SNAT --to 10.10.188.232 # SNAT</span><br><span class="line">vi /etc/sysconfig/network # 配置网关</span><br><span class="line"></span><br><span class="line">iptables -t nat -A POST_ROUTING -d 10.10.188.232 -p tcp --dport 80 -j DNAT --to 10.10.177.232:80 # DNAT</span><br><span class="line"><span class="meta"></span></span><br><span class="line"><span class="meta">#</span><span class="bash">场景五</span></span><br><span class="line">iptables -I INPUT -p tcp --syn --dport 80 -m connlimit --connlimit-above 100 -j REJECT # 限制并发连接访问数</span><br><span class="line">iptables -I INPUT -m limit --limit 3/hour --limit-burst 10 -j ACCEPT # limit模块; --limit-burst 默认为5</span><br></pre></td></tr></table></figure>
+
+
+
+<h2 id="match"><a href="#match" class="headerlink" title="match"></a>match</h2><p>mark: mark = “0xff”<br>tcp: dport = “80”<br>state: state = “RELATED,ESTABLISHED”</p>
+<h2 id="原理"><a href="#原理" class="headerlink" title="原理"></a>原理</h2><h3 id="4个表："><a href="#4个表：" class="headerlink" title="4个表："></a>4个表：</h3><p>filter：input, forward, output<br>nat：prerouting, input, output, postrouting<br>mangle：prerouting, input, forward, output, postrouting<br>raw：prerouting, output<br>​       优先级（由高而低）：raw –&gt; mangle –&gt; nat –&gt; filter</p>
+<h3 id="5个链："><a href="#5个链：" class="headerlink" title="5个链："></a>5个链：</h3><p>规则链名包括(也被称为五个钩子函数（hook functions）)：</p>
+<p>INPUT链 ：处理输入数据包。<br>OUTPUT链 ：处理输出数据包。<br>PORWARD链 ：处理转发数据包。<br>PREROUTING链 ：用于目标地址转换（DNAT）。<br>POSTOUTING链 ：用于源地址转换（SNAT）。</p>
+<h3 id="iptables的表与链"><a href="#iptables的表与链" class="headerlink" title="iptables的表与链"></a>iptables的表与链</h3><ol>
+<li>Filter表。负责过滤功能，防火墙。<br>Filter表示iptables的默认表，因此如果你没有自定义表，那么就默认使用filter表，它具有以下三种内建链：<br>INPUT链 – 处理来自外部的数据。<br>OUTPUT链 – 处理向外发送的数据。<br>FORWARD链 – 将数据转发到本机的其他网卡设备上。</li>
+<li>NAT表。网络地址转换功能（network address translation）<br>NAT表有三种内建链：<br>PREROUTING链 – 处理刚到达本机并在路由转发前的数据包。它会转换数据包中的目标IP地址（destination ip address），通常用于DNAT(destination NAT)。<br>POSTROUTING链 – 处理即将离开本机的数据包。它会转换数据包中的源IP地址（source ip address），通常用于SNAT（source NAT）。<br>OUTPUT链 – 处理本机产生的数据包。</li>
+<li>Mangle表。拆解报文，修改，并重新分装。<br>Mangle表用于指定如何处理数据包。它能改变TCP头中的QoS位。Mangle表具有5个内建链：<br>PREROUTING<br>OUTPUT<br>FORWARD<br>INPUT<br>POSTROUTING</li>
+<li>Raw表。关闭nat表上启动的连接追踪机制<br>Raw表用于处理异常，它具有2个内建链：<br>PREROUTING chain<br>OUTPUT chain</li>
+</ol>
+<h3 id="IPTABLES-规则-Rules"><a href="#IPTABLES-规则-Rules" class="headerlink" title="IPTABLES 规则(Rules)"></a>IPTABLES 规则(Rules)</h3><p>匹配条件+动作 = 规则</p>
+<ol>
+<li>匹配条件<br>源地址（Source ip）， 目标地址（destination ip）<br>扩展条件：源端口，目标端口</li>
+<li>处理动作（target）</li>
+</ol>
+<p>牢记以下三点式理解iptables规则的关键：<br>​    Rules包括一个条件和一个目标(target)<br>​    如果满足条件，就执行目标(target)中的规则或者特定值。<br>​    如果不满足条件，就判断下一条Rules。</p>
+<p>目标值（Target Values）<br>下面是你可以在target里指定的特殊值：<br>​    ACCEPT – 允许防火墙接收数据包<br>​    DROP – 防火墙丢弃包，不给任何回应信息<br>​    LOG:记录到日志中，数据包传递给下一规则<br>​    SNAT: 源地址转换，解决内网用户用同一公网地址上网问题<br>​    DNAT：目标地址转换</p>
+<pre><code>MASQUERADE:是snat的特殊形式，适用于动态、临时会变的ip
+REDIRECT ：重定向、映射、透明代理。
+REJECT:拒绝数据包通过，必要时会给数据发送端一个响应信息
+QUEUE – 防火墙将数据包移交到用户空间
+RETURN – 防火墙停止执行当前链中的后续Rules，并返回到调用链(the calling chain)中。</code></pre><h1 id="命令"><a href="#命令" class="headerlink" title="命令"></a>命令</h1><h2 id="语法"><a href="#语法" class="headerlink" title="语法"></a>语法</h2><p>iptables(选项)(参数)</p>
+<h2 id="选项"><a href="#选项" class="headerlink" title="选项"></a>选项</h2><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br></pre></td><td class="code"><pre><span class="line">-t, --table table 对指定的表 table 进行操作， table 必须是 raw， nat，filter，mangle 中的一个。如果不指定此选项，默认的是 filter 表。</span><br><span class="line"><span class="meta"></span></span><br><span class="line"><span class="meta">#</span><span class="bash"> 通用匹配：源地址目标地址的匹配</span></span><br><span class="line">-p：指定要匹配的数据包协议类型；</span><br><span class="line">-s, --source [!] address[/mask] ：把指定的一个／一组地址作为源地址，按此规则进行过滤。当后面没有 mask 时，address 是一个地址，比如：192.168.1.1；当 mask 指定时，可以表示一组范围内的地址，比如：192.168.1.0/255.255.255.0。</span><br><span class="line">-d, --destination [!] address[/mask] ：地址格式同上，但这里是指定地址为目的地址，按此进行过滤。</span><br><span class="line">-i, --in-interface [!] &lt;网络接口name&gt; ：指定数据包的来自来自网络接口，比如最常见的 eth0 。注意：它只对 INPUT，FORWARD，PREROUTING 这三个链起作用。如果没有指定此选项， 说明可以来自任何一个网络接口。同前面类似，&quot;!&quot; 表示取反。</span><br><span class="line">-o, --out-interface [!] &lt;网络接口name&gt; ：指定数据包出去的网络接口。只对 OUTPUT，FORWARD，POSTROUTING 三个链起作用。</span><br><span class="line"><span class="meta"></span></span><br><span class="line"><span class="meta">#</span><span class="bash"> 查看管理命令</span></span><br><span class="line">-L, --list [chain] 列出链 chain 上面的所有规则，如果没有指定链，列出表上所有链的所有规则。</span><br><span class="line"><span class="meta"></span></span><br><span class="line"><span class="meta">#</span><span class="bash"> 规则管理命令</span></span><br><span class="line">-A, --append chain rule-specification 在指定链 chain 的末尾插入指定的规则，也就是说，这条规则会被放到最后，最后才会被执行。规则是由后面的匹配来指定。</span><br><span class="line">-I, --insert chain [rulenum] rule-specification 在链 chain 中的指定位置插入一条或多条规则。如果指定的规则号是1，则在链的头部插入。这也是默认的情况，如果没有指定规则号。</span><br><span class="line">-D, --delete chain rule-specification -D, --delete chain rulenum 在指定的链 chain 中删除一个或多个指定规则。</span><br><span class="line">-R num：Replays替换/修改第几条规则</span><br><span class="line"><span class="meta"></span></span><br><span class="line"><span class="meta">#</span><span class="bash"> 链管理命令（这都是立即生效的）</span></span><br><span class="line">-P, --policy chain target ：为指定的链 chain 设置策略 target。注意，只有内置的链才允许有策略，用户自定义的是不允许的。</span><br><span class="line">-F, --flush [chain] 清空指定链 chain 上面的所有规则。如果没有指定链，清空该表上所有链的所有规则。</span><br><span class="line">-N, --new-chain chain 用指定的名字创建一个新的链。</span><br><span class="line">-X, --delete-chain [chain] ：删除指定的链，这个链必须没有被其它任何规则引用，而且这条上必须没有任何规则。如果没有指定链名，则会删除该表中所有非内置的链。</span><br><span class="line">-E, --rename-chain old-chain new-chain ：用指定的新名字去重命名指定的链。这并不会对链内部照成任何影响。</span><br><span class="line">-Z, --zero [chain] ：把指定链，或者表中的所有链上的所有计数器清零。</span><br><span class="line"></span><br><span class="line">-j, --jump target &lt;指定目标&gt; ：即满足某条件时该执行什么样的动作。target 可以是内置的目标，比如 ACCEPT，也可以是用户自定义的链。</span><br><span class="line">-h：显示帮助信息；</span><br></pre></td></tr></table></figure>
+
+<h2 id="基本参数"><a href="#基本参数" class="headerlink" title="基本参数"></a>基本参数</h2><table>
+<thead>
+<tr>
+<th>参数</th>
+<th>作用</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>-P</td>
+<td>设置默认策略:iptables -P INPUT (DROP</td>
+</tr>
+<tr>
+<td>-F</td>
+<td>清空规则链</td>
+</tr>
+<tr>
+<td>-L</td>
+<td>查看规则链</td>
+</tr>
+<tr>
+<td>-A</td>
+<td>在规则链的末尾加入新规则</td>
+</tr>
+<tr>
+<td>-I</td>
+<td>num 在规则链的头部加入新规则</td>
+</tr>
+<tr>
+<td>-D</td>
+<td>num 删除某一条规则</td>
+</tr>
+<tr>
+<td>-s</td>
+<td>匹配来源地址IP/MASK，加叹号”!”表示除这个IP外。</td>
+</tr>
+<tr>
+<td>-d</td>
+<td>匹配目标地址</td>
+</tr>
+<tr>
+<td>-i</td>
+<td>网卡名称 匹配从这块网卡流入的数据</td>
+</tr>
+<tr>
+<td>-o</td>
+<td>网卡名称 匹配从这块网卡流出的数据</td>
+</tr>
+<tr>
+<td>-p</td>
+<td>匹配协议,如tcp,udp,icmp</td>
+</tr>
+<tr>
+<td>–dport</td>
+<td>num    匹配目标端口号</td>
+</tr>
+<tr>
+<td>–sport</td>
+<td>num    匹配来源端口号</td>
+</tr>
+</tbody></table>
+<h2 id="iptables-h"><a href="#iptables-h" class="headerlink" title="iptables -h"></a>iptables -h</h2><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">iptables -h</span><br><span class="line"></span><br><span class="line">iptables v1.4.7</span><br><span class="line"></span><br><span class="line">Usage: iptables -[ACD] chain rule-specification [options]</span><br><span class="line">       iptables -I chain [rulenum] rule-specification [options]</span><br><span class="line">       iptables -R chain rulenum rule-specification [options]</span><br><span class="line">       iptables -D chain rulenum [options]</span><br><span class="line">       iptables -[LS] [chain [rulenum]] [options]</span><br><span class="line">       iptables -[FZ] [chain] [options]</span><br><span class="line">       iptables -[NX] chain</span><br><span class="line">       iptables -E old-chain-name new-chain-name</span><br><span class="line">       iptables -P chain target [options]</span><br><span class="line">       iptables -h (print this help information)</span><br></pre></td></tr></table></figure>
+<h2 id="Commands"><a href="#Commands" class="headerlink" title="Commands:"></a>Commands:</h2><p>Either long or short options are allowed.</p>
+<table>
+<thead>
+<tr>
+<th>Commands</th>
+<th>简写</th>
+<th align="left">含义</th>
+<th>中文</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>–append</td>
+<td>-A chain</td>
+<td align="left">Append to chain</td>
+<td>在规则链的末尾加入新规则</td>
+</tr>
+<tr>
+<td>–check</td>
+<td>-C chain</td>
+<td align="left">Check for the existence of a rule</td>
+<td>检查规则是否存在</td>
+</tr>
+<tr>
+<td>–delete</td>
+<td>-D chain</td>
+<td align="left">Delete matching rule from chain</td>
+<td>删除某一条规则</td>
+</tr>
+<tr>
+<td>–delete</td>
+<td>-D chain rulenum</td>
+<td align="left">Delete rule rulenum (1 = first) from chain</td>
+<td>删除某一条规则</td>
+</tr>
+<tr>
+<td>–insert</td>
+<td>-I chain [rulenum]</td>
+<td align="left">Insert in chain as rulenum (default 1=first)</td>
+<td>在规则链的头部加入新规则</td>
+</tr>
+<tr>
+<td>–replace</td>
+<td>-R chain rulenum</td>
+<td align="left">Replace rule rulenum (1 = first) in chain</td>
+<td></td>
+</tr>
+<tr>
+<td>–list</td>
+<td>-L [chain [rulenum]]</td>
+<td align="left">List the rules in a chain or all chains</td>
+<td>查看规则链</td>
+</tr>
+<tr>
+<td>–list-rules</td>
+<td>-S [chain [rulenum]]</td>
+<td align="left">Print the rules in a chain or all chains</td>
+<td></td>
+</tr>
+<tr>
+<td>–flush</td>
+<td>-F [chain]</td>
+<td align="left">Delete all rules in  chain or all chains</td>
+<td>清空规则链</td>
+</tr>
+<tr>
+<td>–zero</td>
+<td>-Z [chain [rulenum]]</td>
+<td align="left">Zero counters in chain or all chains</td>
+<td></td>
+</tr>
+<tr>
+<td>–new</td>
+<td>-N chain</td>
+<td align="left">Create a new user-defined chain</td>
+<td></td>
+</tr>
+<tr>
+<td>–delete-chain</td>
+<td>-X [chain]</td>
+<td align="left">Delete a user-defined chain</td>
+<td></td>
+</tr>
+<tr>
+<td>–policy</td>
+<td>-P chain target</td>
+<td align="left">Change policy on chain to target</td>
+<td></td>
+</tr>
+<tr>
+<td>–rename-chain</td>
+<td>-E old-chain new-chain</td>
+<td align="left">Change chain name, (moving any references)</td>
+<td></td>
+</tr>
+<tr>
+<td>## Options:</td>
+<td></td>
+<td align="left"></td>
+<td></td>
+</tr>
+<tr>
+<td>Options</td>
+<td>简写</td>
+<td align="left">含义</td>
+<td>中文描述</td>
+</tr>
+<tr>
+<td>-</td>
+<td>-</td>
+<td align="left">-</td>
+<td>-</td>
+</tr>
+<tr>
+<td>[!] –protocol</td>
+<td>-p proto</td>
+<td align="left">protocol: by number or name, eg. ‘tcp’</td>
+<td>匹配协议,如tcp,udp,icmp</td>
+</tr>
+<tr>
+<td>[!] –source</td>
+<td>-s address[/mask][…]</td>
+<td align="left">source specification</td>
+<td>匹配来源地址IP/MASK，加叹号”!”表示除这个IP外</td>
+</tr>
+<tr>
+<td>[!] –destination</td>
+<td>-d address[/mask][…]</td>
+<td align="left">destination specification</td>
+<td>匹配目标地址</td>
+</tr>
+<tr>
+<td>[!] –in-interface</td>
+<td>-i input name[+]</td>
+<td align="left">network interface name ([+] for wildcard)</td>
+<td>网卡名称 匹配从这块网卡流入的数据</td>
+</tr>
+<tr>
+<td>[!] –out-interface</td>
+<td>-o output name[+]</td>
+<td align="left">network interface name (+]</td>
+<td>网卡名称 匹配从这块网卡流出的数据</td>
+</tr>
+<tr>
+<td>[!] –fragment</td>
+<td>-f</td>
+<td align="left">match second or further fragments only</td>
+<td></td>
+</tr>
+<tr>
+<td>[!] –version</td>
+<td>-V</td>
+<td align="left">print package version.</td>
+<td></td>
+</tr>
+<tr>
+<td>–ipv4</td>
+<td>-4</td>
+<td align="left">Nothing (line is ignored by ip6tables-restore)</td>
+<td></td>
+</tr>
+<tr>
+<td>–ipv6</td>
+<td>-6</td>
+<td align="left">Error (line is ignored by iptables-restore)</td>
+<td></td>
+</tr>
+<tr>
+<td>–jump</td>
+<td>-j target</td>
+<td align="left">target for rule (may load target extension)</td>
+<td></td>
+</tr>
+<tr>
+<td>–goto</td>
+<td>-g chain</td>
+<td align="left">jump to chain with no return</td>
+<td></td>
+</tr>
+<tr>
+<td>–match</td>
+<td>-m match</td>
+<td align="left">extended match (may load extension)</td>
+<td>扩展匹配（可以加载扩展）</td>
+</tr>
+<tr>
+<td>–numeric</td>
+<td>-n</td>
+<td align="left">numeric output of addresses and ports</td>
+<td>地址和端口的数字输出</td>
+</tr>
+<tr>
+<td>–table</td>
+<td>-t table</td>
+<td align="left">table to manipulate (default: ‘filter’)</td>
+<td>操作的表，默认为‘filter’</td>
+</tr>
+<tr>
+<td>–verbose</td>
+<td>-v</td>
+<td align="left">verbose mode</td>
+<td></td>
+</tr>
+<tr>
+<td>–wait</td>
+<td>-w [seconds]</td>
+<td align="left">maximum wait to acquire xtables lock</td>
+<td></td>
+</tr>
+<tr>
+<td>–wait-interval</td>
+<td>-W [usecs]</td>
+<td align="left">wait time to try to acquire</td>
+<td></td>
+</tr>
+<tr>
+<td>–line-numbers</td>
+<td></td>
+<td align="left">print line numbers when listing</td>
+<td></td>
+</tr>
+<tr>
+<td>–exact</td>
+<td>-x</td>
+<td align="left">expand numbers (display exact values)</td>
+<td></td>
+</tr>
+<tr>
+<td>–modprobe=&lt;command&gt;</td>
+<td></td>
+<td align="left">try to insert modules using this</td>
+<td></td>
+</tr>
+<tr>
+<td>–set-counters PKTS BYTES</td>
+<td></td>
+<td align="left">set the counter during insert/append</td>
+<td></td>
+</tr>
+</tbody></table>
+
+          
+        
+      
+    </div>
+
+    
+
+    
+    
+    
+
+    
+
+    
+      
+    
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="https://lkggithub.github.io/2019/05/29/elasticSearch/"/>
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="lkg"/>
+      <meta itemprop="description" content=""/>
+      <meta itemprop="image" content="/images/avatar.gif"/>
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="lkgBlog"/>
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                
+                <a href="/2019/05/29/elasticSearch/" class="post-title-link" itemprop="url">elasticSearch</a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+
+            
+            
+            
+
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+
+              
+                
+              
+
+              <time title="创建时间：2019-05-29 14:19:18" itemprop="dateCreated datePublished" datetime="2019-05-29T14:19:18+08:00">2019-05-29</time>
+            
+
+            
+              
+
+              
+                
+                <span class="post-meta-divider">|</span>
+                
+
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">更新于</span>
+                
+                <time title="修改时间：2021-03-06 14:39:57" itemprop="dateModified" datetime="2021-03-06T14:39:57+08:00">2021-03-06</time>
+              
+            
+          </span>
+
+          
+
+          
+            
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h1 id="DSL基本属性说明"><a href="#DSL基本属性说明" class="headerlink" title="DSL基本属性说明"></a>DSL基本属性说明</h1><h2 id="1-query-用于包含查询使用到的语法"><a href="#1-query-用于包含查询使用到的语法" class="headerlink" title="1.query: 用于包含查询使用到的语法"></a>1.query: 用于包含查询使用到的语法</h2><ul>
+<li>1.1. <strong>match_all:</strong> 最简单的查询，获取索引所有数据，类似搜索 *。如：”query”:{“match_all”:{}} </li>
+<li>1.2 bool 复合查询，可以包含多个查询条件，主要有(must,must_not,should)<ul>
+<li>1.2.1. must: 用于包含<strong>逻辑与</strong>查询条件，即所有查询条件都满足才行 </li>
+<li>1.2.2. must_not: 用于包含<strong>逻辑非</strong>查询条件，即不包含所有查询的条件数据 </li>
+<li>1.2.3. should: 用于包含<strong>逻辑或</strong>查询条件，即其中有一个条件满足即可 </li>
+<li>1.2.4. filter: 与must一样，包含的所有条件都要满足，但<strong>不会参与计算分值</strong>，查询速度上会提升不少 </li>
+</ul>
+</li>
+<li>1.3. match: <strong>匹配查询</strong>，用于匹配指定属性数据，也可以匹配时间，IP等特殊数据 <ul>
+<li>1.3.1. 注意： match匹配不会解析通配符，匹配的效果受到索引属性类型影响，如果索引属性设置了分词，那么match匹配也会分词匹配，他也不解析”“，但可以设置逻辑关系来处理 </li>
+<li>1.3.2. operator: 匹配逻辑关系，默认是or，可设置为and，这样可达到精确匹配的效果，具体见：<a target="_blank" rel="noopener" href="https://www.elastic.co/guide/en/elasticsearch/reference/5.6/query-dsl-match-query.html#query-dsl-match-query-boolean">https://www.elastic.co/guide/en/elasticsearch/reference/5.6/query-dsl-match-query.html#query-dsl-match-query-boolean</a> </li>
+</ul>
+</li>
+<li>1.4. query_string: 使用<strong>查询解析器</strong>来解析查询内容，如port:80 AND server:http。注意：此类型请求有很多选项属性，可以设置一些特殊的行为，具体见：<a target="_blank" rel="noopener" href="https://www.elastic.co/guide/en/elasticsearch/reference/5.6/query-dsl-query-string-query.html">https://www.elastic.co/guide/en/elasticsearch/reference/5.6/query-dsl-query-string-query.html</a> </li>
+<li>1.5. term: 术语查询，查找包含在反向索引中指定的<strong>确切术语的文档</strong> </li>
+<li>1.6. terms: 术语查询，筛选<strong>具有匹配任何条件的字段</strong>，如”terms” : { “user” : [“kimchy”, “elasticsearch”]} </li>
+<li>1.7. range: 术语查询，将文档与具有<strong>特定范围内的字段相匹配</strong>。Lucene查询的类型依赖于字段类型，对于字符串字段，即TermRangeQuery，而对于number/date字段，查询是一个数字的范围。如：”range”:{“port”:{“gte”:10,”lte”:20,”boost”:2.0}} <ul>
+<li>1.7.1. <strong>gte</strong>: 大于或等于 </li>
+<li>1.7.2. gt: 大于 </li>
+<li>1.7.3. <strong>lte</strong>: 小于或等于 </li>
+<li>1.7.4. lt: 小于 </li>
+<li>1.7.5. boost: 设置查询的boost值，默认值为1.0 </li>
+</ul>
+</li>
+<li>1.8. exists: 术语查询，返回在原始字段中至少有一个<strong>非空值的文档</strong>，注意：”“,”-“这些都不算是空值 </li>
+<li>1.9. prefix: 术语查询，匹配包含带有指定<strong>前缀字段的字段</strong>(没有分析)，前缀查询映射到Lucene前缀查询，如：”prefix” : { “user” : “ki” }，查询user数据前缀为ki的doc </li>
+<li>1.10. wildcard: 术语查询，匹配具有<strong>匹配通配符表达式的字段</strong>(未分析)的文档。支持(<em>通配符)是匹配任何字符序列(包括空的序列)和(?通配符)它匹配任何一个字符。注意，这个查询可能比较慢，因为它需要迭代多个术语。为了防止非常慢的通配符查询，一个通配符项不应该从通配符开始，或者?通配符查询映射到Lucene通配符查询。如：”wildcard” : { “user” : “ki</em>y” } </li>
+<li>1.11. regexp: 术语查询，regexp查询允许您使用<strong>正则表达式术语查询</strong>，意味着Elasticsearch将把regexp应用到该字段的标记器所产生的词汇，而不是该字段的原始文本。regexp查询的性能严重依赖于所选择的正则表达式，通配符往往会降低查询性能。如：”regexp”:{ “name.first”:”s.*y” } </li>
+<li>1.12. fuzzy: 术语查询，模糊查询使用基于Levenshtein编辑距离的相似性。如：”fuzzy” : { “user” : “ki” } </li>
+<li>1.13. type: 术语查询，过滤文档匹配所提供的文档/映射类型。如：”type”:{ “value” : “my_type” } </li>
+<li>1.14. ids: 术语查询，<strong>过滤只具有提供的id的文档</strong>。注意：这个查询使用了_uid字段，类型是可选的，可以省略，也可以接受一组值。如果没有指定类型，那么将尝试在索引映射中定义的所有类型。如：”ids”:{ “type” : “my_type”,”values” : [“1”,”4”,”100”] }。<br>  highlight: 允许在一个或多个字段中突出显示搜索结果，基于lucene plain highlighter。在默认情况下，高亮显示会将高亮显示的文本包装在 and ，可以通过设置pre_tags 与 post_tags来自定义，如：”highlight”:{ “pre_tags” : [““], “post_tags” : [““], “fields” : {“_all”:{}} } </li>
+</ul>
+<h2 id="2-highlight"><a href="#2-highlight" class="headerlink" title="2.highlight"></a>2.highlight</h2><p>: 允许在一个或多个字段中突出显示搜索结果，基于lucene plain highlighter。在默认情况下，高亮显示会将高亮显示的文本包装在 and ，可以通过设置pre_tags 与 post_tags来自定义，如：”highlight”:{ “pre_tags” : [““], “post_tags” : [““], “fields” : {“_all”:{}} } </p>
+<ul>
+<li><p>2.1. pre_tags: 自定义包含搜索关键字的前缀 </p>
+</li>
+<li><p>2.2. post_tags: 自定义包含搜索关键字的后缀 </p>
+</li>
+<li><p>2.3. fields: 用于指定要高亮的属性，_all表示所以属性都需要高亮，如：”fields”:{ “_all” : {} }，也可以指定具体属性 “fields”:{ “app” : {} }，也可以给每个属性单独指定设置 “fields”:{ “app” : {“fragment_size” : 150, “number_of_fragments” : 3} } </p>
+</li>
+<li><p>2.4. highlight_query: 可以通过设置highlight_query来突出显示搜索查询之外的查询，通常，最好将搜索查询包含在highlight_query中。如：”highlight_query”:{ “bool”:{“must”:[{“query_string”:{“query”:app:apache,”analyze_wildcard”:True,”all_fields”:True}}]} } </p>
+</li>
+<li><p>2.5. fragment_size: 用于指定高亮显示时，碎片的长度，如果过短，高亮内容会被切分为多个碎片。默认情况下，当使用高亮显示的内容时，碎片大小会被忽略，因为它会输出句子，而不管它们的长度 </p>
+</li>
+<li><p>2.6. number_of_fragments 用于指定高亮显示时，碎片的数量，如果指定为0，那么就不会产生任何片段</p>
+</li>
+</ul>
+<h2 id="3-from"><a href="#3-from" class="headerlink" title="3.from"></a>3.from</h2><p>  可以通过使用from和size参数来对结果进行分页，from参数指定您想要获取的第一个结果的偏移量</p>
+<h2 id="4-size"><a href="#4-size" class="headerlink" title="4.size:"></a>4.size:</h2><p>可以通过使用from和size参数来对结果进行分页，size参数指定要返回结果的最大数量</p>
+<h2 id="5-sort"><a href="#5-sort" class="headerlink" title="5.sort:"></a>5.sort:</h2><p><strong>desc降序，asc升序</strong></p>
+<p>允许在特定的字段上添加一个或多个排序，排序是在每个字段级别上定义的，用特殊的字段名来排序，然后根据索引排序进行排序，如”sort”: [ { “date”: { “order”: “desc” } } ]，</p>
+<h2 id="6-aggs"><a href="#6-aggs" class="headerlink" title="6.aggs:"></a>6.aggs:</h2><p> 简单来说，aggs主要用于分类集合，可以将查询的数据按指定属性进行分类集合统计等，如：”aggs”:{ “deviceType”:{ “terms”:{ “field”:”deviceType”, “size”:6 } } } </p>
+<ul>
+<li><p>6.1. field: 简单来说，用于指定要分类的属性名称 </p>
+</li>
+<li><p>6.2. size: 用于指定分类集合的数量，即只集合前N名</p>
+</li>
+</ul>
+<h1 id="DSL查询结果格式"><a href="#DSL查询结果格式" class="headerlink" title="DSL查询结果格式"></a>DSL查询结果格式</h1><ul>
+<li><p><strong>ELK的查询结果格式</strong>都是一致的，所以在这里做统一说明，格式如下</p>
+</li>
+<li><p><strong>注意:</strong> 下面的结果格式包含了查询，高亮，排序，分类聚合等数据格式示例，如果只是进行查询，就只会有结果格式，只有进行了相应的操作，才会有相应的结果</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br></pre></td><td class="code"><pre><span class="line">&#123;</span><br><span class="line">    # hits包含了所有结果信息，如条目总数等</span><br><span class="line">    &quot;hits&quot;: &#123;</span><br><span class="line">        # hits包含了具体的结果</span><br><span class="line">        &quot;hits&quot;: [</span><br><span class="line">            &#123;</span><br><span class="line">                # sort包含时间排序值，结果已经是按时间排序了的</span><br><span class="line">                &quot;sort&quot;: [</span><br><span class="line">                    1508408100000</span><br><span class="line">                ],</span><br><span class="line">                # 索引类型</span><br><span class="line">                &quot;_type&quot;: &quot;test&quot;,</span><br><span class="line">                # 结果原数据</span><br><span class="line">                &quot;_source&quot;: &#123;</span><br><span class="line">                    &quot;redunip&quot;: &quot;122.115.79.2&quot;,</span><br><span class="line">                    &quot;date&quot;: &quot;2017-10-19T18:15:00+08:00&quot;,</span><br><span class="line">                    &quot;country&quot;: &quot;中国&quot;</span><br><span class="line">                &#125;,</span><br><span class="line">                &quot;_score&quot;: null,</span><br><span class="line">                # 索引名称</span><br><span class="line">                &quot;_index&quot;: &quot;test_test_test&quot;,</span><br><span class="line">                # 包含对原数据高亮的部分，如果要显示高亮，需要将此数据覆盖原数据</span><br><span class="line">                &quot;highlight&quot;: &#123;</span><br><span class="line">                    &quot;country&quot;: [</span><br><span class="line">                        &quot;&lt;em&gt;中国&lt;/em&gt;&quot;</span><br><span class="line">                    ]</span><br><span class="line">                &#125;,</span><br><span class="line">                # 索引数据ID</span><br><span class="line">                &quot;_id&quot;: &quot;122.115.79.2&quot;</span><br><span class="line">            &#125;,</span><br><span class="line">            &#123;</span><br><span class="line">                &quot;sort&quot;: [</span><br><span class="line">                    1508408100000</span><br><span class="line">                ],</span><br><span class="line">                &quot;_type&quot;: &quot;test&quot;,</span><br><span class="line">                &quot;_source&quot;: &#123;</span><br><span class="line">                    &quot;redunip&quot;: &quot;182.254.216.71&quot;,</span><br><span class="line">                    &quot;date&quot;: &quot;2017-10-19T18:15:00+08:00&quot;,</span><br><span class="line">                    &quot;country&quot;: &quot;中国&quot;</span><br><span class="line">                &#125;,</span><br><span class="line">                &quot;_score&quot;: null,</span><br><span class="line">                &quot;_index&quot;: &quot;test_test_test&quot;,</span><br><span class="line">                &quot;highlight&quot;: &#123;</span><br><span class="line">                    &quot;country&quot;: [</span><br><span class="line">                        &quot;&lt;em&gt;中国&lt;/em&gt;&quot;</span><br><span class="line">                    ]</span><br><span class="line">                &#125;,</span><br><span class="line">                &quot;_id&quot;: &quot;182.254.216.71&quot;</span><br><span class="line">            &#125;</span><br><span class="line">        ],</span><br><span class="line">        # 查询数据总条目数量</span><br><span class="line">        &quot;total&quot;: 18934351,</span><br><span class="line">        &quot;max_score&quot;: null</span><br><span class="line">    &#125;,</span><br><span class="line">    # 查询涉及到的数据分块</span><br><span class="line">    &quot;_shards&quot;: &#123;</span><br><span class="line">        &quot;successful&quot;: 30,</span><br><span class="line">        &quot;failed&quot;: 0,</span><br><span class="line">        &quot;skipped&quot;: 0,</span><br><span class="line">        &quot;total&quot;: 30</span><br><span class="line">    &#125;,</span><br><span class="line">    &quot;took&quot;: 228,</span><br><span class="line">    # 查询分类聚合数据</span><br><span class="line">    &quot;aggregations&quot;: &#123;</span><br><span class="line">        # 分类的名称</span><br><span class="line">        &quot;country&quot;: &#123;</span><br><span class="line">            # 聚合的结果</span><br><span class="line">            &quot;buckets&quot;: [</span><br><span class="line">                &#123;</span><br><span class="line">                    # 聚合的数据</span><br><span class="line">                    &quot;key&quot;: &quot;中国&quot;,</span><br><span class="line">                    # 聚合统计的总数量</span><br><span class="line">                    &quot;doc_count&quot;: 18934351</span><br><span class="line">                &#125;</span><br><span class="line">            ],</span><br><span class="line">            &quot;sum_other_doc_count&quot;: 0,</span><br><span class="line">            &quot;doc_count_error_upper_bound&quot;: 0</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;,</span><br><span class="line">    # 表示查询是否超时</span><br><span class="line">    &quot;timed_out&quot;: false</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+</li>
+</ul>
+<h1 id="elasticsearch-查询（match和term）"><a href="#elasticsearch-查询（match和term）" class="headerlink" title="elasticsearch 查询（match和term）"></a><a target="_blank" rel="noopener" href="https://www.cnblogs.com/yjf512/p/4897294.html">elasticsearch 查询（match和term）</a></h1><h2 id="match"><a href="#match" class="headerlink" title="match"></a>match</h2><p>分词后匹配，并且根据lucene的评分机制(TF/IDF)来进行评分。</p>
+<h3 id="match-phrase"><a href="#match-phrase" class="headerlink" title="match_phrase"></a>match_phrase</h3><p>精确匹配，分词后的词都必须匹配上。eg：”宝马多少马力”会被分词为”宝马 多少 马力”，match_phrase结果必须同时包含”宝马 多少 马力”</p>
+<h3 id="multi-match"><a href="#multi-match" class="headerlink" title="multi_match"></a>multi_match</h3><p>两个字段进行匹配，其中一个字段有这个文档就满足就能匹配上。</p>
+<h2 id="term"><a href="#term" class="headerlink" title="term"></a>term</h2><p>term是代表完全匹配，即不进行分词器分析，文档中必须包含整个搜索的词汇。</p>
+<p>使用term要确定的是这个字段是否“被分析”(analyzed)，默认的字符串是被分析的。</p>
+<h1 id="Mapping-映射"><a href="#Mapping-映射" class="headerlink" title="Mapping(映射)"></a>Mapping(映射)</h1><p><strong>注意</strong>：mapping的注意事项</p>
+<p>mapping一旦创建之后，就无法修改，只能追加，如果要修改，就需要删除掉整个文档进行重建。</p>
+<h2 id="2-mapping中的可设置的属性"><a href="#2-mapping中的可设置的属性" class="headerlink" title="2. mapping中的可设置的属性"></a>2. mapping中的可设置的属性</h2><p>mappings ： 在index（库）下创建时使用，下面可以有多个mapping 以下数据结构主要针对每个mapping进行说明：</p>
+<table>
+<thead>
+<tr>
+<th>一级属性</th>
+<th>二级属性</th>
+<th>三级属性</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>dynamic</td>
+<td></td>
+<td></td>
+<td>新增字段自动模式；true:表示自动识别新字段并创建索引，false:不自动索引新字段，strict:遇到未知字段，抛异常，不能存入</td>
+</tr>
+<tr>
+<td>_timestamp</td>
+<td></td>
+<td></td>
+<td>是否使用时间戳，ES会自动加时间戳，使用的话请百度</td>
+</tr>
+<tr>
+<td>properties</td>
+<td></td>
+<td></td>
+<td>属性列表（类似数据库多个字段定义）</td>
+</tr>
+<tr>
+<td></td>
+<td>{字段名}</td>
+<td></td>
+<td>某个字段的定义</td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td>type</td>
+<td>数据类型，参见数据类型说明</td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td>index</td>
+<td>映射选型，参见映射选型说明</td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td>doc_values</td>
+<td>布尔值， 对not_analyzed字段，默认都是开启，分词字段不能使用，对排序和聚合能提升较大性能，节约内存</td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td>format</td>
+<td>如果数据类型为日期格式，传入值得时候是字符串，ES需要一个格式进行识别，如：yyyy-MM-dd HH:mm: ss</td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td>analyzer</td>
+<td>分词器，如ik,ansj(中文分词)</td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td>boost</td>
+<td>浮点型，字段级别的分数加权（权重）</td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td>ignore_above</td>
+<td>超过多少字符，就不处理，分词性能损耗较大，对字符串较长的可不分词</td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td>null_value</td>
+<td>设置一些缺失字段的初始化值，只有string可以使用，分词字段的null值也会被分词</td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td>store</td>
+<td>是否单独设置此字段的是否存储而从_source字段中分离，默认是false，只能搜索，不能获取值</td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td>search_analyzer</td>
+<td>设置搜索时的分词器，默认跟ananlyzer是一致的，比如index时用standard+ngram，搜索时用standard用来完成自动提示功能</td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td>其它</td>
+<td>similarity，term_vector，norms，include_in_all，index_options，fielddata，ignore_malformed，precision_step</td>
+</tr>
+</tbody></table>
+<p>一个典型的mapping对象的属性有：</p>
+<figure class="highlight json"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br></pre></td><td class="code"><pre><span class="line">&#123;</span><br><span class="line">    <span class="attr">&quot;mappings&quot;</span>: &#123;</span><br><span class="line">        <span class="attr">&quot;my_type&quot;</span>: &#123;</span><br><span class="line">        <span class="comment">//true:表示自动识别新字段并创建索引，false:不自动索引新字段，strict:遇到未知字段，抛异常，不能存入</span></span><br><span class="line">            <span class="attr">&quot;dynamic&quot;</span>:      <span class="string">&quot;strict&quot;</span>, </span><br><span class="line">            </span><br><span class="line">              <span class="comment">//动态模板</span></span><br><span class="line">             <span class="attr">&quot;dynamic_templates&quot;</span>: [</span><br><span class="line">                    &#123; <span class="attr">&quot;stash_template&quot;</span>: &#123;</span><br><span class="line">                      <span class="attr">&quot;path_match&quot;</span>:  <span class="string">&quot;stash.*&quot;</span>,</span><br><span class="line">                      <span class="attr">&quot;mapping&quot;</span>: &#123;</span><br><span class="line">                        <span class="attr">&quot;type&quot;</span>:           <span class="string">&quot;string&quot;</span>,</span><br><span class="line">                        <span class="attr">&quot;index&quot;</span>:       <span class="string">&quot;not_analyzed&quot;</span></span><br><span class="line">                      &#125;</span><br><span class="line">                    &#125;&#125;</span><br><span class="line">                  ],</span><br><span class="line">            <span class="comment">//属性列表</span></span><br><span class="line">            <span class="attr">&quot;properties&quot;</span>: &#123;</span><br><span class="line">                <span class="comment">//一个strign类型的字段</span></span><br><span class="line">                <span class="attr">&quot;title&quot;</span>:  &#123; <span class="attr">&quot;type&quot;</span>: <span class="string">&quot;string&quot;</span>&#125;,</span><br><span class="line">                </span><br><span class="line">                <span class="attr">&quot;stash&quot;</span>:  &#123;</span><br><span class="line">                    <span class="attr">&quot;type&quot;</span>:     <span class="string">&quot;object&quot;</span>,</span><br><span class="line">                    <span class="attr">&quot;dynamic&quot;</span>:  <span class="literal">true</span> </span><br><span class="line">                &#125;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+
+
+<h2 id="Elasticsearch数据类型"><a href="#Elasticsearch数据类型" class="headerlink" title="Elasticsearch数据类型"></a>Elasticsearch数据类型</h2><p><strong>JSON基础类型如下：</strong></p>
+<p>字符串：text、string<br>数字：byte、short、integer、long、float、double、<br>时间：date<br>布尔值:boolean（true、false）<br>数组: array<br>对象: object</p>
+<p><strong>Elasticsearch独有的类型：</strong></p>
+<p>多重: multi<br>经纬度: geo_point<br>网络地址: ip<br>堆叠对象: nested object<br>二进制: binary<br>附件: attachment</p>
+<h3 id="映射选型说明"><a href="#映射选型说明" class="headerlink" title="映射选型说明"></a>映射选型说明</h3><p>某个属性（字段）的index可选值有：</p>
+<p>analyzed:默认选项，以标准的全文索引方式，分析字符串，完成索引。<br>not_analyzed:精确索引，不对字符串做分析，直接索引字段数据的精确内容。<br>no：不索引该字段。</p>
+
+          
+        
+      
+    </div>
+
+    
+
+    
+    
+    
+
+    
+
+    
+      
+    
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="https://lkggithub.github.io/2019/05/29/docker&kubernetes/"/>
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="lkg"/>
+      <meta itemprop="description" content=""/>
+      <meta itemprop="image" content="/images/avatar.gif"/>
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="lkgBlog"/>
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                
+                <a href="/2019/05/29/docker&kubernetes/" class="post-title-link" itemprop="url">kubernetes</a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+
+            
+            
+            
+
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+
+              
+                
+              
+
+              <time title="创建时间：2019-05-29 13:58:59" itemprop="dateCreated datePublished" datetime="2019-05-29T13:58:59+08:00">2019-05-29</time>
+            
+
+            
+              
+
+              
+                
+                <span class="post-meta-divider">|</span>
+                
+
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">更新于</span>
+                
+                <time title="修改时间：2021-03-06 14:39:57" itemprop="dateModified" datetime="2021-03-06T14:39:57+08:00">2021-03-06</time>
+              
+            
+          </span>
+
+          
+
+          
+            
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h1 id="安装docker"><a href="#安装docker" class="headerlink" title="安装docker"></a>安装docker</h1><ol>
+<li><p>安装所需的包。<br>yum-utils提供了yum-config-manager</p>
+<blockquote>
+<p>yum install -y yum-utils device-mapper-persistent-data lvm2</p>
+</blockquote>
+</li>
+<li><p>设置稳定存储库</p>
+<blockquote>
+<p>yum-config-manager –add-repo <a target="_blank" rel="noopener" href="https://download.docker.com/linux/centos/docker-ce.repo">https://download.docker.com/linux/centos/docker-ce.repo</a></p>
+</blockquote>
+</li>
+<li><p>安装DOCKER CE</p>
+<blockquote>
+<p>yum install docker-ce</p>
+</blockquote>
+</li>
+<li><p>启动Docker。</p>
+<blockquote>
+<p>systemctl start docker</p>
+</blockquote>
+<h2 id="卸载docker"><a href="#卸载docker" class="headerlink" title="卸载docker"></a>卸载docker</h2><p>卸载Docker包.主机上的Images, containers, volumes或自定义配置文件不会自动删除。要删除所有Images, containers, volumes</p>
+<blockquote>
+<p>yum remove docker* &amp;&amp; rm -rf /var/lib/docker</p>
+</blockquote>
+</li>
+</ol>
+<h1 id="安装kubernetes"><a href="#安装kubernetes" class="headerlink" title="安装kubernetes"></a>安装kubernetes</h1><ol>
+<li>安装 flannel etcd<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">yum -y install flannel etcd</span><br><span class="line">systemctl start etcd.service</span><br><span class="line">systemctl enable etcd.service</span><br><span class="line">systemctl status etcd.service</span><br></pre></td></tr></table></figure></li>
+<li>启动<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#</span><span class="bash"> 关闭防火墙</span></span><br><span class="line">systemctl stop firewalld</span><br><span class="line">systemctl disable firewalld</span><br><span class="line"><span class="meta">#</span><span class="bash"> 关闭Swap Kubernetes 1.8开始要求关闭系统的Swap，如果不关闭，默认配置下kubelet将无法启动。方法一,通过kubelet的启动参数–fail-swap-on=<span class="literal">false</span>更改这个限制。方法二,关闭系统的Swap。</span></span><br><span class="line">swapoff -a </span><br><span class="line">sed -i &#x27;s/.*swap.*/#&amp;/&#x27; /etc/fstab</span><br><span class="line"><span class="meta">#</span><span class="bash"> 禁用SELinux</span></span><br><span class="line">setenforce  0 </span><br><span class="line">sed -i &quot;s/^SELINUX=enforcing/SELINUX=disabled/g&quot; /etc/sysconfig/selinux </span><br><span class="line">sed -i &quot;s/^SELINUX=enforcing/SELINUX=disabled/g&quot; /etc/selinux/config </span><br><span class="line">sed -i &quot;s/^SELINUX=permissive/SELINUX=disabled/g&quot; /etc/sysconfig/selinux </span><br><span class="line">sed -i &quot;s/^SELINUX=permissive/SELINUX=disabled/g&quot; /etc/selinux/config  </span><br><span class="line"><span class="meta">#</span><span class="bash"> 配置系统内核参数使流过网桥的流量也进入iptables/netfilter框架中，在/etc/sysctl.conf中添加以下配置：</span></span><br><span class="line">cat &lt;&lt;EOF &gt;  /etc/sysctl.d/k8s.conf</span><br><span class="line">net.bridge.bridge-nf-call-ip6tables = 1</span><br><span class="line">net.bridge.bridge-nf-call-iptables = 1</span><br><span class="line">EOF</span><br><span class="line">sysctl -p /etc/sysctl.d/k8s.conf</span><br></pre></td></tr></table></figure></li>
+</ol>
+
+          
+        
+      
+    </div>
+
+    
+
+    
+    
+    
+
+    
+
+    
+      
+    
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="https://lkggithub.github.io/2019/05/29/nmap/"/>
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="lkg"/>
+      <meta itemprop="description" content=""/>
+      <meta itemprop="image" content="/images/avatar.gif"/>
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="lkgBlog"/>
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                
+                <a href="/2019/05/29/nmap/" class="post-title-link" itemprop="url">nmap</a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+
+            
+            
+            
+
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+
+              
+                
+              
+
+              <time title="创建时间：2019-05-29 13:26:08" itemprop="dateCreated datePublished" datetime="2019-05-29T13:26:08+08:00">2019-05-29</time>
+            
+
+            
+              
+
+              
+                
+                <span class="post-meta-divider">|</span>
+                
+
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">更新于</span>
+                
+                <time title="修改时间：2021-03-06 14:39:57" itemprop="dateModified" datetime="2021-03-06T14:39:57+08:00">2021-03-06</time>
+              
+            
+          </span>
+
+          
+
+          
+            
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <ol>
+<li>主机发现，端口扫描（指纹识别），服务和版本探测，操作系统探测，</li>
+<li>端口状态：open(开放的)， closed(关闭的)，和filtered(被过滤的) </li>
+<li>性能：在本地网络对一个主机的默认扫描(nmap &lt; hostname&gt;)需要1/5秒</li>
+</ol>
+<p>–exclude &lt;host1[，host2][，host3]，…&gt; (排除主机/网络)<br>如果在您指定的扫描范围有一些主机或网络不是您的目标， 那就用该选项加上以逗号分隔的列表排除它们。该列表用正常的Nmap语法， 因此它可以包括主机名，CIDR，八位字节范围等等。 当您希望扫描的网络包含执行关键任务的服务器，已知的对端口扫描反应强烈的 系统或者被其它人看管的子网时，这也许有用。</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#</span><span class="bash"> Intense scan</span></span><br><span class="line">nmap -T4 -A -v 192.168.1.108</span><br><span class="line"><span class="meta">#</span><span class="bash"> Intense scan plus UDP</span></span><br><span class="line">nmap -sS -sU -T4 -A -v 192.168.1.108</span><br><span class="line"><span class="meta">#</span><span class="bash"> Intense scan, all TCP ports</span></span><br><span class="line">nmap -p 1-65535 -T4 -A -v 192.168.1.108</span><br><span class="line"><span class="meta">#</span><span class="bash"> Intense scan, no ping</span></span><br><span class="line">nmap -T4 -A -v -Pn 192.168.1.108</span><br><span class="line"><span class="meta"></span></span><br><span class="line"><span class="meta">#</span><span class="bash"> Ping scan</span></span><br><span class="line">nmap -sn 192.168.1.108</span><br><span class="line"><span class="meta">#</span><span class="bash"> Quick scan</span></span><br><span class="line">nmap -T4 -F 192.168.1.108</span><br><span class="line"><span class="meta">#</span><span class="bash"> Quick scan plus</span></span><br><span class="line">nmap -sV -T4 -O -F --version-light 192.168.1.108</span><br><span class="line"><span class="meta">#</span><span class="bash"> Quick traceroute</span></span><br><span class="line">nmap -sn --traceroute 192.168.1.108</span><br><span class="line"><span class="meta">#</span><span class="bash"> Regular scan</span></span><br><span class="line">nmap 192.168.1.108</span><br><span class="line"><span class="meta">#</span><span class="bash"> Slow comprehensive scan</span></span><br><span class="line">nmap -sS -sU -T4 -A -v -PE -PP -PS80,443 -PA3389 -PU40125 -PY -g 53 --script &quot;default or (discovery and safe)&quot; 192.168.1.108</span><br></pre></td></tr></table></figure>
+          
+        
+      
+    </div>
+
+    
+
+    
+    
+    
+
+    
+
+    
+      
+    
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
   </section>
 
-  {% include '_partials/pagination.swig' %}
-{% endblock %}
+  
+  <nav class="pagination">
+    <a class="extend prev" rel="prev" href="/">&lt;i class&#x3D;&quot;fa fa-angle-left&quot; aria-label&#x3D;&quot;上一页&quot;&gt;&lt;&#x2F;i&gt;</a><a class="page-number" href="/">1</a><span class="page-number current">2</span>
+  </nav>
 
-{% block sidebar %}
-  {{ sidebar_template.render(false) }}
-{% endblock %}
+
+
+          </div>
+          
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    <div class="sidebar-inner">
+
+      
+
+      
+
+      <div class="site-overview-wrap sidebar-panel sidebar-panel-active">
+        <div class="site-overview">
+          <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+            
+              <p class="site-author-name" itemprop="name">lkg</p>
+              <div class="site-description motion-element" itemprop="description"></div>
+          </div>
+
+          
+            <nav class="site-state motion-element">
+              
+                <div class="site-state-item site-state-posts">
+                
+                  <a href="/archives/%20%7C%7C%20archive">
+                
+                    <span class="site-state-item-count">14</span>
+                    <span class="site-state-item-name">日志</span>
+                  </a>
+                </div>
+              
+
+              
+                
+                
+                <div class="site-state-item site-state-categories">
+                  
+                    
+                      <a href="/categories/%20%7C%7C%20th">
+                    
+                  
+                    
+                    
+                      
+                    
+                    <span class="site-state-item-count">1</span>
+                    <span class="site-state-item-name">分类</span>
+                  </a>
+                </div>
+              
+
+              
+                
+                
+                <div class="site-state-item site-state-tags">
+                  
+                    
+                      <a href="/tags/%20%7C%7C%20tags">
+                    
+                  
+                    
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                    <span class="site-state-item-count">8</span>
+                    <span class="site-state-item-name">标签</span>
+                  </a>
+                </div>
+              
+            </nav>
+          
+
+          
+
+          
+
+          
+            <div class="links-of-author motion-element">
+              
+                <span class="links-of-author-item">
+                  
+                  
+                    
+                  
+                  
+                    
+                  
+                  <a href="https://github.com/lkgGitHub" title="GitHub &rarr; https://github.com/lkgGitHub" rel="noopener" target="_blank"><i class="fa fa-fw fa-github"></i>GitHub</a>
+                </span>
+              
+                <span class="links-of-author-item">
+                  
+                  
+                    
+                  
+                  
+                    
+                  
+                  <a href="https://blog.csdn.net/lkgCSDN" title="CSDN &rarr; https://blog.csdn.net/lkgCSDN" rel="noopener" target="_blank"><i class="fa fa-fw fa-CSDN"></i>CSDN</a>
+                </span>
+              
+                <span class="links-of-author-item">
+                  
+                  
+                    
+                  
+                  
+                    
+                  
+                  <a href="https://www.cnblogs.com/lkgBlogs" title="博客园 &rarr; https://www.cnblogs.com/lkgBlogs" rel="noopener" target="_blank"><i class="fa fa-fw fa-博客园"></i>博客园</a>
+                </span>
+              
+                <span class="links-of-author-item">
+                  
+                  
+                    
+                  
+                  
+                    
+                  
+                  <a href="/627861816@qq.com" title="E-Mail &rarr; 627861816@qq.com"><i class="fa fa-fw fa-E-Mail"></i>E-Mail</a>
+                </span>
+              
+            </div>
+          
+
+          
+
+          
+          
+
+          
+            
+          
+          
+
+        </div>
+      </div>
+
+      
+
+      
+
+    </div>
+  </aside>
+  
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright">&copy; <span itemprop="copyrightYear">2021</span>
+  <span class="with-love" id="animate">
+    <i class="fa fa-user"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">lkg</span>
+
+  
+
+  
+</div>
+
+
+
+        
+
+
+
+
+
+
+
+
+        
+      </div>
+    </footer>
+
+    
+      <div class="back-to-top">
+        <i class="fa fa-arrow-up"></i>
+        
+      </div>
+    
+
+    
+
+    
+
+    
+  </div>
+
+  
+
+<script>
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  <script src="/lib/jquery/index.js?v=2.1.3"></script>
+
+  
+  <script src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+
+  
+  <script src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+
+
+  
+
+
+  <script src="/js/utils.js?v=7.1.1"></script>
+
+  <script src="/js/motion.js?v=7.1.1"></script>
+
+
+
+  
+  
+
+
+  <script src="/js/affix.js?v=7.1.1"></script>
+
+  <script src="/js/schemes/pisces.js?v=7.1.1"></script>
+
+
+
+  
+
+  
+
+
+  <script src="/js/next-boot.js?v=7.1.1"></script>
+
+
+  
+
+  
+
+  
+
+  
+
+
+
+  
+
+
+
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+</body>
+</html>

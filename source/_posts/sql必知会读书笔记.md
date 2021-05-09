@@ -1,7 +1,10 @@
-sqtitle: sql必知会读书笔记
+---
+title: sql必知会读书笔记
 date: 2019-07-24 11:53:46
 tags: sql
 categories: 数据库
+---
+#  sql必知会读书笔记
 
 1. sql是什么
 

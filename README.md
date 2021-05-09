@@ -1,9 +1,15 @@
 # 部署
 > npm install hexo-deployer-git --save
 ```shell
+# 发布
+# -d, --deploy	    文件生成后立即部署网站 
+# -g, --generate	部署之前预先生成静态文件
 hexo clean
 hexo g
 hexo d
+
+# 本地服务 
+hexo server
 ```
 # 新建
 ```shell
